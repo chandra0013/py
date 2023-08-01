@@ -1,0 +1,52 @@
+s=r'a\n\ob\n\oc'
+print(s)
+print(len(s))
+
+str='there are %d %s vampires;'%(5,"bloody")
+print(str)
+k=5
+str='there are %d vampires;'%k
+print(str)
+str='that is {0} {1} werewolves'.format(1,'dead')
+print(str)
+name=input("what is ur name")
+print(name)
+print(name.isupper())
+print(name.islower())
+print(name.lower())
+print(name.upper())
+print(len(name))
+total=0
+for y in name:
+    print(y)
+    total=total+ord(y)
+print(total)
+print(name.count('a'))
+for x in name:
+    print(x)
+
+print(name.count('a')+name.count('h')+name.count('d'))
+#positive & negative index
+n=len(name)
+print(s[0])
+print(s[n])
+print(s[-n])
+print(s[-1])
+print(s[1:3:1])
+if(s[::-1]==s):
+    print("%s is palindrome",s)
+else:
+    print("%s is not a palindrome",s)
+
+pan=input()
+lol=pan[0:5:1]
+lmao=pan[5:9:1]
+kun=pan[9]
+if(lol.isalpha()):
+    if(lol.isupper()):
+        if(lmao.isdigit()):
+            if(kun.isalpha()):
+                if(kun.isupper()):
+                    print("valid pan number")
+else:
+    print("Not valid Bro")
