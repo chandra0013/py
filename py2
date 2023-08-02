@@ -1,0 +1,68 @@
+#1)
+alp=input("enter the string")
+key=int(input("enter the key"))
+alpha=alp.lower()
+for char in alpha:
+    if ord(char) >= 97 and ord(char) <= 119:
+        n=ord(char)+key  
+        print(chr(n))
+    elif ord(char)>=120 and ord(char)<=122:
+        n=ord(char)-23
+        print(chr(n))
+    else:
+        print("invalid input")
+
+
+#2)
+import re
+if re.match(".end","bends"):
+    print("Matched")
+else:
+    print("not matched")
+#Prints Matched
+import re
+if re.match(".end$","bends"):
+    print("Matched")
+else:
+    print("Not matched")
+
+
+#3)reg No
+import re
+register=input()
+if re.match("^[1-9][0-9][a-zA-Z]{3}[0-9]{4}$",register):
+     print("matched")
+else:
+    print("Not matched")
+
+
+#4)valid or not with re.match
+import re
+num=input("ENTER UR MOBILE NUMBER")
+if re.match("^[1-9][0-9]{9}$",num):
+        print("Entered mobile number is valid")
+else:
+    print("not a valid mobile number bro ur fraud")
+
+import re
+pan=input("enter ur pan card number")
+if re.match("^[a-zA-Z]{5}[0-9]{4}[a-zA-Z]$",pan):
+    print("Valid pan card number")
+else:
+    print("not a valid pan card number bro ur fraud")
+
+#5)check integer
+import re
+num=input("enter the integer")
+if re.match("\-?[0-9]+$",num):
+    print("valid")
+else:
+    print("not valid")
+#6)check floating point
+import re
+lol=input("enter floating point")
+if re.match("\-?[0-9]+[.]{1}[0-9]+$",lol):
+    print("valid")
+else:
+    print("not valid")
+
