@@ -1,0 +1,11 @@
+#4)Matrix Addition
+row=int(input("enter no of rows"))
+col=int(input("enter no of columns"))
+print("enter elements of first matrix")
+mat=[[int(input("enter the number")) for j in range(col)] for i in range(row)]
+print("enter elements of second matrix")
+lol=[[int(input("enter the number")) for j in range(col)] for i in range(row)]
+print(mat)
+print(lol)
+summat=[[mat[i][j]+lol[i][j] for j in range(col)] for i in range(row)]
+print(summat)
