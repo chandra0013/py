@@ -1,0 +1,6 @@
+#3)MATRIX
+row=col=3
+mat=[[int(input("enter the number")) for j in range(col)] for i in range(row)]
+print(mat)
+for x in mat:
+    print(x)
