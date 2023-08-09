@@ -1,0 +1,10 @@
+#enter multiples of 5 of given tuple into another tuple and display the output
+t=()
+k=()
+n=int(input("enter num"))
+for i in range(1,n+1):
+    t+=(int(input()),)
+for x in t:
+    if(x%5==0):
+        k+=(x,)
+print(k)
