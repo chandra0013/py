@@ -1,0 +1,11 @@
+#2)sunny and johnny together have m dollars and ice cream parlour has n flavours they chan choose only two flavours.you are given cost of these flavours.ith flavour cost is ci.display the indices of the two flavoours whose sum is m
+m=int(input("What is amount of money there"))
+n=int(input("number of flavours in total"))
+listt=[]
+for i in range(n):
+    listt.append(int(input("enter flavour vaLue")))
+print(listt)
+for j in range(n-1):
+    for k in range(j+1,n):
+        if(listt[j]+listt[k] == m):
+            print("indices are ",j,k)
