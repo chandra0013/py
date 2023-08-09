@@ -1,0 +1,7 @@
+#Create tuple
+t=()
+n=int(input("enter num"))
+for i in range(0,n):
+    s=int(input())
+    t=t+(s,)
+print(t)
