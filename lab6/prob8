@@ -1,0 +1,15 @@
+t=()
+minv=(20,35.5,12,120,80)
+maxv=(30,40,15,150,120)
+for i in range(0,5):
+    t+=(input(),)
+print(t)
+print("lab reports")
+for i in range(0,5):
+    if(t[i]=='N'):
+        print("test "+str(i+1)+"is not performed")
+        continue
+    if((float(t[i])>=(minv[i]))and (float(t[i])<=(maxv[i]))):
+       print("test result"+str(i+1)+"is normal")
+    else:
+           print("test result "+str(i+1)+"is abnormal")
