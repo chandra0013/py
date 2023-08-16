@@ -1,0 +1,15 @@
+s1=["chandra","22mia1024",23,34,45]
+s2=["waterBOTle","22mia1049",99,99,99]
+def fnc(s):
+    avg=((s[2]+s[3]+s[4])/3)
+    if(avg >= 59):
+         print(s[1]+" is pass")
+         s.append(avg)
+         s.append("pass")
+    else:
+        print(s[1]+" is fail")
+        s.append(avg)
+        s.append("Fail")
+
+fnc(s1)
+print(s1)
