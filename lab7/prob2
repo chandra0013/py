@@ -1,0 +1,12 @@
+#find factorial
+def lol(n):
+    fact=1
+    if n==0 or n==1:
+        return(1)
+    elif n>=0:
+        return n*lol(n-1)
+    else:
+        print("invalid input")
+
+rel=lol(10)
+print(rel)
