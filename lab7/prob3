@@ -1,0 +1,9 @@
+#find gcd
+def funcc(x,y):
+    if(y==0):
+        return(x)
+    else:
+        return funcc(y,x%y)
+
+lp=funcc(30,20)
+print(lp)
