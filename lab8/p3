@@ -1,0 +1,12 @@
+fh=open("lik.txt","w")
+fh.write("hello world")
+fh.close()
+
+fh=open("lik.txt","w")
+lines_of_text=["a line of text","another line of text","a third line"]
+fh.writelines(lines_of_text)
+fh.close()
+#to append a file in use
+fh=open("lik.txt","a")
+fh.write("hello world again")
+fh.close()
