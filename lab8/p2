@@ -1,0 +1,11 @@
+#read()-Return one big string
+#readline()--return one line at a time
+#readlines(0-return a list of lines
+#content=lik.read()
+#print(content)
+fp=open("lik.txt","r+")
+while True:
+        line=fp.readline()
+        if not line:
+            break
+        print(line)
