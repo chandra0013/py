@@ -1,0 +1,9 @@
+
+#Copying the contents from one file to another
+f1=open("lik.txt","r+")
+s1=f1.read()
+f1.close()
+f2=open("s2.txt","w+")
+f2.write(s1)
+f2.close()
+print("File Copied")
