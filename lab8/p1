@@ -1,0 +1,10 @@
+#File Handling
+#Modes
+#read-r+
+#write-w+
+#append-a+
+f1=open("lik.txt","r")
+print("Name of the file: ",f1.name)
+print("Opened or not: ",f1.closed)
+print("Opening mode: ",f1.mode)
+
