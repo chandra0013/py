@@ -1,0 +1,17 @@
+#print no of words
+fc=open("lik.txt","r")
+s1=fc.read()
+nw=len(s1.split())
+print("total number of lines :",nw)
+#print longest line
+def input_stats(lik):
+    fid=open(lik)
+    s2=fid.readlines()
+
+    longest=""
+    for line in s2:
+        if len(line)>len(longest):
+            longest=line
+    print("longest line =",len(longest))
+    print(longest)
+input_stats("lik.txt")
