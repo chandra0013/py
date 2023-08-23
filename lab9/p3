@@ -1,0 +1,14 @@
+#CALCULATE THE AREA of the room
+class room:
+    def __init__(self):
+         self.length=int(input("enter the length"))
+         self.breadth=int(input("enter the breadth"))
+    def calc_area(self):
+         area=self.length*self.breadth
+         print("area of the room",area)
+R1=room()
+print(R1.length,R1.breadth)
+R1.calc_area()
+R2=room()
+print(R2.length,R2.breadth)
+R2.calc_area()
