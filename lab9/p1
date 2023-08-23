@@ -1,0 +1,19 @@
+#Opening the csv file
+fp=open("marks.csv","r+")
+fw=open("Result.txt","w+")
+fp.seek(0)
+l=[]
+line=fp.readline()
+heading=line
+heading=heading.replace("\n","")
+fw.write(heading+",Total\n")
+while True:
+    line=fp.readline()
+    if(not line):
+        break
+    line=line.replace("\n","")
+    st=line.split(',')
+    total=int(st[1])+int(st[2])+int(st[3])
+    fw.write(line+","+str(total)+"\n")
+fp.close()
+fw.close()
