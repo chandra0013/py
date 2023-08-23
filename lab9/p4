@@ -13,3 +13,14 @@ for i in range(0,m):
 print(s)
 for i in range(0,m):
     print(" Name: "+s[i].full_name," Age: ",s[i].age)
+
+
+#Sorting the age
+for i in range(len(s)):
+         for j in range(i+1,len(s)):
+             if s[i].age>s[j].age:
+                s[j],s[i]=s[i],s[j]
+    print("AFTER SORTING")
+    for i in range(0,m):
+               print(" Name: "+s[i].full_name," Age: ",s[i].age)
+
