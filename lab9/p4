@@ -1,0 +1,15 @@
+#display the names and ages of students
+class student:
+    def __init__(self,n,a):
+        self.full_name=n
+        self.age=a
+s=[]
+m=int(input("Enter no of students"))
+for i in range(0,m):
+    name=input("enter the name")
+    age=int(input("Age:"))
+    stud=student(name,age)
+    s.append(stud)
+print(s)
+for i in range(0,m):
+    print(" Name: "+s[i].full_name," Age: ",s[i].age)
