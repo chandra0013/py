@@ -1,0 +1,35 @@
+import pandas as pd
+lol='/home/ex5/Downloads/sales2.csv'
+df=pd.read_csv(lol)
+print(df)
+print(df.describe())
+print(df.isnull())
+print(df[df.isnull()])
+print(df[df["customer_id"]==3001])
+df.iloc[9,1]==500
+df.loc[9,['purch_amt']]=500
+print(df)
+lf=df.sort_values('purch_amt',ascending=False)
+print(lf.iloc[0])
+print(lf[lf['purch_amt']>1000])
+lf=lf.set_index(["ord_date"])
+print(lf)
+lf['ord_date']=pd.to_datetime(lf['ord_date'])
+lf
+=lf.groupby('customer_id')
+for x in l:
+    print(x)
+
+slicing
+fillna etc
+rename column names
+sorting(based on index and attributes**pakka)
+combine two or three conditions and put 'and'
+max and min value
+groupby and aggregate functions
+print segments
+plot graph
+gone
+line
+scattter
+pie
