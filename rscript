@@ -1,0 +1,104 @@
+#the matrix function
+#R wants the data to be entered by columns starting with column one
+#1st argument:c(2,3,-2,1,2,2) the values of the elements filling the columns
+#2nd arg:no of rows
+#3rd arg:no of columns
+
+A=matrix(c(2,3,-2,1,2,2,3),3,2)
+A
+c<-colSums(A)
+c
+r<-rowSums(A)
+r
+y<-matrix(1:20,nrow=4,ncol=5)
+A=matrix(c(1,2,3,4),nrow=2,byrow=1)
+print(y)
+print(A)
+
+
+Rownames=c("R1","R2","R3")
+Colnames=c("C1","C2","C3")
+y=matrix(20:9,nrow=3,ncol=3,
+dimnames=list(Rownames,Colnames))
+y
+
+B<-matrix(c(1,4,-2,1,2,1),3,2)
+B
+#transpose
+AT<-t(A)
+AT
+#union
+U<-matrix(1,3,2)
+U
+#zero
+Z<-matrix(0,3,2)
+Z
+#identity
+I<-diag(c(1,1,1))
+I
+C<-cbind(A,B)
+C
+C<-rbind(A,B)
+C
+
+
+
+
+
+
+
+
+
+
+
+#Represent the height in cm information of a team of 12 basketball players as a matrix of dimension 4x3 in row major form
+D = matrix(c(23,34,54,23,56,21,56,32,76,32,74,145),4,3,byrow=TRUE)
+D
+#Access the height at row 3 and column 2
+D[3,2]
+#Display all the heights at row 2
+D[2,]
+#Display all the heights in column 3
+D[,3]
+#Extract the height in all rows but only in column1 and 3
+D[,c(1,3)]
+#Find the transpose of the matrix
+DT<-t(D)
+DT
+#Four more players got added to the team.Update the matrix to reflect the heights of the player
+D_4=c(23,56,32,44)
+nd=cbind(D,D_4)
+nd
+#Find the rowwise sum and columnwise sum
+ndr=rsum(D)
+ndr
+#Trace of matrix
+trace=sum(diag(nd))
+print(trace)
+
+
+
+#creating vectors
+vec1<-c(1,2,3)
+vec2<-c(TRUE,FALSE)
+#creating a list of vectors
+list1=list(vec1,vec2)
+#printing list of vectors
+print(list1)
+#printing list
+print(list1[[2]])
+print(list1[[2]][2])
+
+x<-list(mt=matrix(1:6,nrow=2),lt=letters[1:8],n=c(1:10))
+x
+
+
+
+
+#creating a list to maintain the dtails of the student such as registration number,name,no of courses registered
+Stu=list(id="22mia1024",Name="chandra kiran",noofcourses=5,marks=c(54,65,76,87,89))
+Stu
+Stu$marks[i]=Stu$marks[i]+5
+Stu
+#retrieve the name of the student
+Stu_data$name
