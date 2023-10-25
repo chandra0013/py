@@ -1,0 +1,53 @@
+install.packages("dplyr")
+library("dplyr")
+
+library("dplyr")
+air_quality=airquality
+dim(air_quality)
+str(air_quality)
+
+glimpse(airquality)
+mydata=airquality
+sample_n(mydata,3)
+head(mydata)
+sample_frac(mydata,0.1)
+x1=distinct(mydata)
+#select all rows where temp is more than 90 and month is september
+filter(air_quality,Month==9,Temp>90)
+head(filter(air_quality,!is.na(Ozone)),5)
+arrange(air_quality,Day,desc(Month))
+#mutate() function generally create add new variable that are function of exisiting variable
+mutate(air_quality,temp_celsius=(Temp-32)*5/9)
+select(airquality,Ozone:Wind)
+select(air_quality,-Solar.R)
+select(air_quality,contains("o"))
+
+1)Display all the variables of data with some portion of the data for each variable that can be fit on a single line. 
+library("dplyr")
+mt_cars=mtcars
+2)Display all the observations
+mt_cars
+3)Display any 5 observations randomly. 
+mydata=mtcars
+sample_n(mydata,5)
+4)Display only a fraction of observations randomly. 
+sample_frac(mydata,0.1)
+5)Display only the MPG column.
+select(mt_cars,mpg)
+6)Display the variables that starts with the letter ‘d’
+select(mt_cars,starts_with("d"))
+7)Displays data in the columns from MPG to DISP without the CYL attribute. 
+select(mt_cars,one_of("mpg","disp"))
+8)Display all records whose HP values are more than 125 and MPG less than 15.0
+filter(mt_cars,hp>125,mpg<15.0)
+9)Include a new attribute NV by adding WT and MPG together. 
+mutate(mt_cars,nv=wt+mpg)
+10)Display the maximum and minimum HP value. 
+summarize(mt_cars,max_val=max(hp),min_val=min(hp))
+11). Filter all the data with HP greater than 125 and arrange them in increasing order of MPG. 
+arrange(mt_cars,mpg,hp>125)
+12). Calculate the average WT for each unique value in the AM column for mtcar data having HP > 125.
+mtcars %>%
+  filter(hp>125) %>%
+  group_by(am) %>%
+  summarize(Avg_wt=mean(wt))
